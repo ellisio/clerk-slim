@@ -1,0 +1,35 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env", "**/.env.*local"],
+  "globalEnv": [
+    "NODE_ENV",
+    "VERCEL_ENV"
+  ],
+  "pipeline": {
+    "@snowtrek/main#dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "lint:fix": {
+      "cache": false
+    },
+    "test": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
+    }
+  }
+}

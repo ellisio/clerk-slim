@@ -1,0 +1,60 @@
+{
+  "name": "@snowtrek/ui",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src",
+    "./styles.css": "./src/styles.css",
+    "./postcss.config.js": "./postcss.config.js",
+    "./prettier.config.js": "./prettier.config.js",
+    "./tailwind.config.js": "./tailwind.config.js"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@chakra-ui/react-use-merge-refs": "^2.1.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.7.16",
+    "@heroicons/react": "^2.0.18",
+    "@snowtrek/utils": "*",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.15",
+    "next": "^13.4.19",
+    "next-themes": "^0.2.1",
+    "postcss": "^8.4.29",
+    "postcss-focus-visible": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.49.0",
+    "eslint-config-custom": "*",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "rimraf": "^5.0.1",
+    "tsc": "^2.0.4",
+    "tsconfig": "*",
+    "typescript": "^5.2.2"
+  }
+}
